@@ -1,0 +1,308 @@
+/* For temporary hightlighting  */
+/* background: rgba(255, 45, 82, 0.2);
+box-shadow: 0 0 0 3px rgb(255, 45, 82); */
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700&display=swap');
+@keyframes background {
+    0% {
+        background: #6EBF47;
+    }
+    10% {
+        background: #FE8A25;
+    }
+    20% {
+        background: #FCB13E;
+    }
+    30% {
+        background: #FAC44A;
+    }
+    40% {
+        background: #F0C548;
+    }
+    50% {
+        background: #B0BA48;
+    }
+    60% {
+        background: #6EBF47;
+    }
+    70% {
+        background: #4BA490;
+    }
+    80% {
+        background: #2E93DA;
+    }
+    90% {
+        background: #2B90EA;
+    }
+    100% {
+        background: #3F73E8;
+    }
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@media screen and (min-width: 451px) {
+    .nav-mobile {
+        display: none;
+    }
+    body {
+        font-family: 'Dosis', sans-serif;
+        background-color: white;
+    }
+    
+    .container {
+        background-color: white;
+    }
+    
+    /* --------------- Header */
+    
+    .header img {
+        padding: 0 15px;
+    }
+    
+    /* --------------- Navigation */
+    .nav-mobile {
+        display: none;
+    }
+    .nav a {
+        color: black;
+        font-size: 1.5rem;
+    }
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link:active {
+        outline: none;
+        color: white;
+        animation: background 1s infinite alternate;
+    }
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item:active {
+        background: black;
+        outline: none;
+        color: white;
+    }
+    
+    h1 {
+        text-transform: uppercase;
+    }
+  
+    /* --------------- Footer */
+    .footer {
+        min-height: 70px;
+    }
+    
+    .footer ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 0 auto;
+    
+        list-style: none;
+    }
+    
+    /* Social links */
+    .social-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        
+        fill: black;
+    }
+    .social-button:hover,
+    .social-button:focus {
+        animation: background 1s infinite alternate;
+    }
+    .social-button:hover path,
+    .social-button:focus path {
+        fill: white;
+    }
+    
+    /* Copyright */
+    .footer-copyright {
+        font-size: 1rem;
+        color: black;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+    .footer-copyright:hover,
+    .footer-copyright:focus {
+        text-decoration: none;
+        color: white;
+        animation: background 1s infinite alternate;
+    }
+}
+
+/* a {
+    text-decoration: none;
+} */
+
+/* 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: black;
+
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.enter-site {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+
+    background: yellowgreen;
+    
+}
+
+a {
+    text-decoration: none;
+} */
+
+/* Экстрамалые девайсы («телефоны», < 576px) */
+/* Нет @media, т.к. это по умолчанию в Bootstrap */
+
+/* Малые девайсы («ландшафтные телефоны», >= 576px) */
+/* @media (min-width: 576px) { ... } */
+
+/* Средние девайсы («таблетки», >= 768px) */
+/* @media (min-width: 768px) { ... } */
+
+/* Большие девайсы (десктопы, >= 992px) */
+/* @media (min-width: 992px) { ... } */
+
+/* Экстрабольшие девайсы (большие десктопы, >= 1200px) */
+/* @media (min-width: 1200px) { ... } */
+
+
+
+
+@media screen and (max-width: 450px) {
+    body {
+        font-family: 'Dosis', sans-serif;
+        background-color: white;
+    }
+    
+    .container {
+        background-color: white;
+    }
+    
+    /* --------------- Header */
+    
+    .header img {
+        padding: 0 15px;
+    }
+    
+    /* --------------- Navigation */
+    .nav-pc {
+        display: none;
+    }
+    .nav-mobile li {
+        width: 100%;
+    }
+    
+    .nav a {
+        color: black;
+        font-size: 1.5rem;
+    }
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link:active {
+        outline: none;
+        color: white;
+        animation: background 1s infinite alternate;
+    }
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item:active {
+        background: black;
+        outline: none;
+        color: white;
+    }
+    
+    h1 {
+        text-transform: uppercase;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /* --------------- Footer */
+    .footer {
+        min-height: 70px;
+    }
+    
+    .footer ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 0 auto;
+    
+        list-style: none;
+    }
+    
+    /* Social links */
+    .social-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        
+        fill: black;
+    }
+    .social-button:hover,
+    .social-button:focus {
+        animation: background 1s infinite alternate;
+    }
+    .social-button:hover path,
+    .social-button:focus path {
+        fill: white;
+    }
+    
+    /* Copyright */
+    .footer-copyright {
+        font-size: 1rem;
+        color: black;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+    .footer-copyright:hover,
+    .footer-copyright:focus {
+        text-decoration: none;
+        color: white;
+        animation: background 1s infinite alternate;
+    }
+}
