@@ -1,10 +1,3 @@
-<!-- 
-    Написать что я владею укулеле, гитарой, фоно
-    Задать свой вид курсора
-    Сделать эти анимированные круглишки под или сбоку каждым из элементов списка меню и чтобы
-    при наведении на каждый из элеметов кружок под ним становился белым плавно
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,17 +17,16 @@
     <div class="container">
         <!-- --------------- Header -->
         <div class="row header">
+
+            <!-- Logo -->
             <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <h1>Mia Arber</h1>
+            <a href="#" title="Home" class="header-logo-link disabled"><h1>Mia Arber</h1></a> 
             </div>
+
+            <!-- Navigation -->
             <div class="col-12 col-md">
                 <!-- --------------- Navigation (PC) -->
                 <ul class="nav justify-content-center align-items-center nav-pc">
-
-                    <!-- Home -->
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                    </li>
 
                     <!-- Diary (dropdown) -->
                     <li class="nav-item dropdown">
@@ -55,7 +47,7 @@
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="photos.html">Photos</a>
                         <a class="dropdown-item" href="covers.html">Covers</a>
-                        <a class="dropdown-item" href="vlog.html">Poems</a>
+                        <a class="dropdown-item" href="vlog.html">Vlog</a>
                         </div>
                     </li>
 
@@ -69,10 +61,6 @@
                 <!-- --------------- Navigation (MOBILE) -->
                 <ul class="nav flex-column justify-content-center align-items-center nav-mobile">
 
-                    <!-- Home -->
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                    </li>
 
                     <!-- Diary (dropdown) -->
                     <li class="nav-item dropdown">
@@ -93,7 +81,7 @@
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="photos.html">Photos</a>
                         <a class="dropdown-item" href="covers.html">Covers</a>
-                        <a class="dropdown-item" href="vlog.html">Poems</a>
+                        <a class="dropdown-item" href="vlog.html">Vlog</a>
                         </div>
                     </li>
 
@@ -104,29 +92,58 @@
 
                 </ul>
             </div>
-            <img src="images/header-img.jpg" class="" width="100%" alt="Mia Arber with uke">
-        </div>
 
+        </div>
+ 
         <!-- --------------- Main -->
+
+        <!-- Carousel -->
+        <div class="row">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a target="_blank" href="https://youtu.be/W81BmUTIP78" title="Watch cover on &laquo;Switchblade&raquo; by LP">
+                            <img src="images/carousel-img-1.jpeg" class="d-block w-100" alt="Cover on &laquo;Switchblade&raquo; by LP">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a target="_blank" href="https://youtu.be/2O9r4wcd428" title="Watch cover on &laquo;Ordinary Day&raquo; by Dolores O&apos;Riordan">
+                            <img src="images/carousel-img-2.jpeg" class="d-block w-100" alt="Cover on &laquo;Ordinary Day&raquo; by Dolores O&apos;Riordan">
+                        </a>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!-- Greeting text -->
         <div class="row">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                <h1>Hi! How are you doing?</h1>
-                <p>
-                    Welcome to the creative space of Mia Arber
-                </p>
+                <h1 class="text-center">Hi! How are you doing?</h1>
+                <p>Welcome to the creative space of Mia Arber</p>
+                <a class="map-view" href="map.html">Watch where I am from</a>
             </div>
-
         </div>
-            
-        
-
+             
+         
+ 
         <!-- --------------- Footer -->
         <div class="row footer">
             <!-- Social links -->
             <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
                 <ul>
                     <li>
-                        <a class="social-button" title="VK" href="https://vk.com/miaarber"><span class="visually-hidden">VK</span>
+                        <a class="social-button" title="VK" href="https://vk.com/miaarber" target="_blank"><span class="visually-hidden">VK</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 26.14 14.91">
                                 <path d="M26 13.47l-.09-.17a13.55 13.55 0 0 0-2.6-3q-.87-.83-1.1-1.12A1 1 0 0 1 22 8a10.27 
                                     10.27 0 0 1 1.22-1.78l.88-1.16q2.35-3.13 2-4L26 .94a.8.8 0 0 0-.4-.22 2.14 2.14 0 0 0-.87 
@@ -151,7 +168,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="social-button" title="Facebook" href="https://www.facebook.com/miaarberr"><span class="visually-hidden">Facebook</span>
+                        <a class="social-button" title="Facebook" href="https://www.facebook.com/miaarberr" target="_blank"><span class="visually-hidden">Facebook</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 10.15 21.74">
                                 <path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 
                                 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#000">
@@ -160,7 +177,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="social-button" title="Instagram" href="https://www.instagram.com/miaarber/"><span class="visually-hidden">Instagram</span>
+                        <a class="social-button" title="Instagram" href="https://www.instagram.com/miaarber/" target="_blank"><span class="visually-hidden">Instagram</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 20 20">
                                 <path d="M18 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-8 
                                 6a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2.5 18a.47.47 0 0 1-.5-.5V9h2.1a3.4 3.4 0 0 0-.1 1 6 6 
@@ -174,63 +191,29 @@
             </div>
             <!-- Copyright -->
             <div class="col-12 col-md d-flex justify-content-center align-items-center">
-                <a class="footer-copyright" href="https://instagram.com/miafrontend">Website by Mia Front-End</a>
+                <a class="footer-copyright" title="Instagram blog" href="https://instagram.com/miafrontend" target="_blank">Website by Mia Front-End</a>
             </div>
         </div>
-        
-        
-        
 
-        
-        
-        
-
-
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- --------------- Modal -->
+        <section class="modal modal-map">
+            <h2 class="visually-hidden">Where I am from</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37429.915251579514!2d28.281679118378865!3d54.10264974310855!rameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <p>
+                <img src="images/map.jpg" width="650" height="535" alt="Zhodino, Belarus">
+            </p>
+            <button class="modal-close" type="button">Close</button>
+        </section>
+         
+ 
     </div>
-
+ 
+    <script src="script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-</body>
-</html>
+ 
+ </body>
+ </html>
