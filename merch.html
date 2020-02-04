@@ -113,8 +113,9 @@
 
             
             <div class="row">
-                <!-- Filter -->
-                <div class="col-md-3 d-flex align-items-start">
+                <!-- Filter SHOW - XS; LG, XL -->
+                <!-- https://bootstrap-4.ru/docs/4.4/utilities/display/ -->
+                <div class="col-xs-12 col-lg-3 col-xl-3 d-block d-sm-none d-md-none d-lg-block d-xl-block">
                     <!-- Фильтр товаров -->
                     <section class="filters">
                         <h2 class="visually-hidden">Filter</h2>
@@ -133,12 +134,16 @@
                                         <label for="filter-white">White</label>
                                     </li>
                                     <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox disabled" type="checkbox" name="yellow" id="filter-yellow" disabled>
-                                        <label for="filter-yellow">Yellow</label>
+                                            <input class="visually-hidden filter-input filter-input-checkbox disabled" type="checkbox" name="red" id="filter-red" disabled>
+                                            <label for="filter-red">Red</label>
+                                        </li>
+                                    <li class="filter-option">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
+                                        <label for="filter-blue">Blue</label>
                                     </li>
                                     <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue">
-                                        <label for="filter-blue">Blue</label>
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
+                                        <label for="filter-black">Black</label>
                                     </li>
                                     <li class="filter-option">
                                         <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="multi" id="filter-multi" checked>
@@ -166,10 +171,76 @@
                             <button type="submit" class="filter-button button">Show results</button>
                         </form>
                     </section>
-                </div>
+                </div>  
 
-                <!-- Merch -->
-                <div class="col-md-9 d-flex align-items-end">
+                <!-- Filter SHOW - SM, MD -->
+                <!-- https://bootstrap-4.ru/docs/4.4/utilities/display/ -->
+                <div class="col-sm-12 col-md-12 d-none d-sm-block d-md-block d-lg-none d-xl-none">
+                    <!-- Фильтр товаров -->
+                    <section class="filters">
+                        <h2 class="visually-hidden">Filter</h2>
+                        <!-- Форма фильтрации (адрес и метод отправки формы get).
+                        Этот метод позволит пользователю передать ссылку на результаты своего поиска другому человеку -->
+                        <form class="filter" method="GET" action="">
+
+                            <!-- Форма фильтрации содержит две группы фильтров: по цветам и по группе товаров -->
+                                <!-- 1 -->
+                                <fieldset>
+                                    <!-- Заголовок фильтров по цветам -->
+                                    <legend>Colors:</legend>
+                                    <!-- Перечень цветов -->
+                                    <ul>
+                                        <!-- Пользователь может выбрать сколько угодно цветов -->
+                                        <li class="filter-option">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-white" checked>
+                                            <label for="filter-white">White</label>
+                                        </li>
+                                        <li class="filter-option">
+                                            <input class="visually-hidden filter-input filter-input-checkbox disabled" type="checkbox" name="red" id="filter-red" disabled>
+                                            <label for="filter-red">Red</label>
+                                        </li>
+                                        <li class="filter-option">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
+                                            <label for="filter-blue">Blue</label>
+                                        </li>
+                                        <li class="filter-option">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
+                                            <label for="filter-black">Black</label>
+                                        </li>
+                                        <li class="filter-option">
+                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="multi" id="filter-multi" checked>
+                                            <label for="filter-multi">Multicolor</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+
+                                <!-- 2 -->
+                                <fieldset>
+                                    <!-- Заголовок фильтров по группе товаров -->
+                                    <legend>Type:</legend>
+                                    <!-- Перечень групп товаров -->
+                                    <ul>
+                                        <!-- В этой группе фильтров пользователь может выбрать только один тип товара -->
+                                        <li class="filter-option">
+                                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories" checked>
+                                            <label for="filter-accessories">Accessories</label>
+                                        </li>
+                                        <li class="filter-option">
+                                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="clothes" id="filter-clothes">
+                                            <label for="filter-clothes">Clothes</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+
+
+                            <!-- Кнопка для отправки формы -->
+                            <button type="submit" class="filter-button button">Show results</button>
+                        </form>
+                    </section>
+                </div> 
+
+                <!-- Merch --> 
+                <div class="merch col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 d-flex">
                     <!-- Каталог товаров -->
                     <section class="catalog">
                         <h2 class="visually-hidden">Список аксессуаров</h2>
@@ -178,79 +249,81 @@
                         2) Shopper bag 
                         3) Bandana
                         4) Beanie -->
-                        <ul class="catalog-list">
-                            <!-- Pin set -->
-                            <li class="catalog-item">
-                                <!-- Обернем все содержимое в одну ссылку: название и категорию товара, его изображение.
-                                Раньше было нельзя — это было запрещено прямо в спецификации HTML4. 
-                                В современной спецификации HTML5 блочные элементы можно оборачивать в ссылки. 
-                                На это теперь не ругается валидатор W3C и браузеры правильно обрабатывают такую вложенность.
-                                Материалы: 
-                                1) HTML Standart https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element
-                                2) HTML Шорты: Ссылки вокруг блоков (автор: Вадим Макеев) https://htmlacademy.ru/blog/useful/html/short-1 -->
-                                <a href="catalog-item.html">
-                                    <h3>
-                                        <span class="catalog-category">Pin set</span>
-                                        <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
-                                    </h3>
-                                    <p class="catalog-item-image">
-                                        <img src="images/pinset.jpg" width="200" height="200" alt="Pin set &laquo;Mia Arber&raquo;">
-                                    </p>
-                                </a>
-                                <p class="catalog-item-price">
-                                    <b>&#x24; 10.00</b>
-                                    <a class="button" href="#">Buy</a>
-                                </p>
-                            </li>
-                            <!-- Shopper bag -->
-                            <li class="catalog-item">
-                                <a href="catalog-item.html">
-                                    <h3>
-                                        <span class="catalog-category">Shopper bag</span>
-                                        <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
-                                    </h3>
-                                    <p class="catalog-item-image">
-                                        <img src="images/shopperbag.jpg" width="200" height="200" alt="Shopper bag &laquo;Mia Arber&raquo;">
-                                    </p>
-                                </a>
-                                <p class="catalog-item-price">
-                                    <b>&#x24; 20.00</b>
-                                    <a class="button" href="#">Buy</a>
-                                </p>
-                            </li>
-                            <!-- Bandana -->
-                            <li class="catalog-item">
-                                <a href="catalog-item.html">
-                                    <h3>
-                                        <span class="catalog-category">Bandana</span>
-                                        <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
-                                    </h3>
-                                    <p class="catalog-item-image">
-                                        <img src="images/bandana.jpg" width="200" height="200" alt="Bandana &laquo;Mia Arber&raquo;">
-                                    </p>
-                                </a>
-                                <p class="catalog-item-price">
-                                    <b>&#x24; 10.00</b>
-                                    <a class="button" href="#">Buy</a>
-                                </p>
-                            </li>
-                            <!-- Beanie -->
-                            <li class="catalog-item">
-                                <a href="catalog-item.html">
-                                    <h3>
-                                        <span class="catalog-category">Beanie</span>
-                                        <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
-                                    </h3>
-                                    <p class="catalog-item-image">
-                                        <img src="images/beanie.jpg" width="200" height="200" alt="Beanie &laquo;Mia Arber&raquo;">
-                                    </p>
-                                </a>
-                                <p class="catalog-item-price">
-                                    <b>&#x24; 20.00</b>
-                                    <a class="button" href="#">Buy</a>
-                                </p>
-                            </li>
-                        </ul>
+                        <div class="catalog-list d-flex justify-content-space">
+                            
+                                <!-- Pin set -->
+                                <div class="catalog-item accessories-item multi-color-item blue-color-item col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <!-- Обернем все содержимое в одну ссылку: название и категорию товара, его изображение.
+                                    Раньше было нельзя — это было запрещено прямо в спецификации HTML4. 
+                                    В современной спецификации HTML5 блочные элементы можно оборачивать в ссылки. 
+                                    На это теперь не ругается валидатор W3C и браузеры правильно обрабатывают такую вложенность.
+                                    Материалы: 
+                                    1) HTML Standart https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element
+                                    2) HTML Шорты: Ссылки вокруг блоков (автор: Вадим Макеев) https://htmlacademy.ru/blog/useful/html/short-1 -->
+                                    <a href="catalog-item.html">
+                                        <h3>
+                                            <span class="catalog-category">Pin set</span>
+                                            <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
+                                        </h3>
+                                        <div class="catalog-item-image">
+                                            <img src="images/pinset.jpg" width="100%" height="auto" alt="Pin set &laquo;Mia Arber&raquo;">
+                                        </div>
+                                    </a>
+                                    <div class="catalog-item-price d-flex">
+                                        <div class="catalog-item-price-price">&#x24; 10.00</div>
+                                        <a class="button" href="#">Buy</a>
+                                    </div>
+                                </div>
+                                <!-- Shopper bag -->
+                                <div class="catalog-item accessories-item blue-color-item white-color-item col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <a href="catalog-item.html">
+                                        <h3>
+                                            <span class="catalog-category">Shopper bag</span>
+                                            <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
+                                        </h3>
+                                        <div class="catalog-item-image">
+                                            <img src="images/shopperbag.jpg" width="100%" height="auto" alt="Shopper bag &laquo;Mia Arber&raquo;">
+                                        </div>
+                                    </a>
+                                    <div class="catalog-item-price">
+                                        <div class="catalog-item-price-price">&#x24; 20.00</div>
+                                        <a class="button" href="#">Buy</a>
+                                    </div>
+                                </div>
+                                <!-- Bandana -->
+                                <div class="catalog-item clothes-item black-color-item col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <a href="catalog-item.html">
+                                        <h3>
+                                            <span class="catalog-category">Bandana</span>
+                                            <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
+                                        </h3>
+                                        <div class="catalog-item-image">
+                                            <img src="images/bandana.jpg" width="100%" height="auto" alt="Bandana &laquo;Mia Arber&raquo;">
+                                        </div>
+                                    </a>
+                                    <div class="catalog-item-price">
+                                        <div class="catalog-item-price-price">&#x24; 10.00</div>
+                                        <a class="button" href="#">Buy</a>
+                                    </div>
+                                </div>
+                                <!-- Beanie -->
+                                <div class="catalog-item clothes-item white-color-item col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <a href="catalog-item.html">
+                                        <h3>
+                                            <span class="catalog-category">Beanie</span>
+                                            <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
+                                        </h3>
+                                        <div class="catalog-item-image">
+                                            <img src="images/beanie.jpg" width="100%" height="auto" alt="Beanie &laquo;Mia Arber&raquo;">
+                                        </div>
+                                    </a>
+                                    <div class="catalog-item-price">
+                                        <div class="catalog-item-price-price">&#x24; 20.00</div>
+                                        <a class="button" href="#">Buy</a>
+                                    </div>
+                                </div>
+                            
+                        </div>
 
                         <!-- Pagination -->
                         <ul class="pagination-list">
