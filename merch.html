@@ -103,9 +103,8 @@
                 <div class="col-12 d-flex justify-content-start">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                          <li class="breadcrumb-item"><a href="merch.html">Merch</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Accessories</li>
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Merch</li>
                         </ol>
                       </nav>
                 </div>
@@ -114,130 +113,118 @@
             
             <div class="row">
                 <!-- Filter SHOW - XS; LG, XL -->
-                <!-- https://bootstrap-4.ru/docs/4.4/utilities/display/ -->
                 <div class="col-xs-12 col-lg-3 col-xl-3 d-block d-sm-none d-md-none d-lg-block d-xl-block">
-                    <!-- Фильтр товаров -->
-                    <section class="filters">
-                        <h2 class="visually-hidden">Filter</h2>
-                        <!-- Форма фильтрации (адрес и метод отправки формы get).
-                        Этот метод позволит пользователю передать ссылку на результаты своего поиска другому человеку -->
-                        <form class="filter" method="GET" action="">
-                            <!-- Форма фильтрации содержит две группы фильтров: по цветам и по группе товаров -->
-                            <fieldset>
-                                <!-- Заголовок фильтров по цветам -->
-                                <legend>Colors:</legend>
-                                <!-- Перечень цветов -->
-                                <ul>
-                                    <!-- Пользователь может выбрать сколько угодно цветов -->
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-white" checked>
-                                        <label for="filter-white">White</label>
-                                    </li>
-                                    <li class="filter-option">
-                                            <input class="visually-hidden filter-input filter-input-checkbox disabled" type="checkbox" name="red" id="filter-red" disabled>
-                                            <label for="filter-red">Red</label>
-                                        </li>
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
-                                        <label for="filter-blue">Blue</label>
-                                    </li>
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
-                                        <label for="filter-black">Black</label>
-                                    </li>
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="multi" id="filter-multi" checked>
-                                        <label for="filter-multi">Multicolor</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                            <fieldset>
-                                <!-- Заголовок фильтров по группе товаров -->
-                                <legend>Type:</legend>
-                                <!-- Перечень групп товаров -->
-                                <ul>
-                                    <!-- В этой группе фильтров пользователь может выбрать только один тип товара -->
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories" checked>
-                                        <label for="filter-accessories">Accessories</label>
-                                    </li>
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="clothes" id="filter-clothes">
-                                        <label for="filter-clothes">Clothes</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                            <!-- Кнопка для отправки формы -->
-                            <button type="submit" class="filter-button button">Show results</button>
-                        </form>
-                    </section>
+                    <!-- Форма фильтрации содержит две группы фильтров: по цветам и по группе товаров -->
+                    <form class="filter filters" id="filterForm" method="GET">
+                    
+                        <!-- Перечень цветов -->
+                        <!-- Пользователь может выбрать сколько угодно цветов -->
+
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-white" value="white" checked>
+                        <label for="filter-white" class="filter-option">White</label>
+                    
+                    
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox disabled" type="checkbox" name="red" id="filter-red" value="red" disabled>
+                        <label for="filter-red" class="filter-option">Red</label>
+                        
+                    
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue" value="blue" checked>
+                        <label for="filter-blue" class="filter-option">Blue</label>
+                    
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black" value="black" checked>
+                        <label for="filter-black" class="filter-option">Black</label>
+
+
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="multi" id="filter-multi" value="multi" checked>
+                        <label for="filter-multi" class="filter-option">Multicolor</label>
+
+                        <br>
+                        
+                        
+                        <!-- Перечень групп товаров -->
+                        
+                        <!-- В этой группе фильтров пользователь может выбрать только один тип товара -->
+                            
+                        
+                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories" checked>
+                        <label for="filter-accessories" class="filter-option">Accessories</label>
+                          
+                           
+                        
+                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="clothes" id="filter-clothes">
+                        <label for="filter-clothes" class="filter-option">Clothes</label>
+                            
+                     
+                    
+                        <!-- Кнопка для отправки формы -->
+                        <button type="submit" class="filter-button button" id="showFilterButton">Show results</button>
+                    </form>
+
                 </div>  
 
+
                 <!-- Filter SHOW - SM, MD -->
-                <!-- https://bootstrap-4.ru/docs/4.4/utilities/display/ -->
                 <div class="col-sm-12 col-md-12 d-none d-sm-block d-md-block d-lg-none d-xl-none">
-                    <!-- Фильтр товаров -->
-                    <section class="filters">
-                        <h2 class="visually-hidden">Filter</h2>
-                        <!-- Форма фильтрации (адрес и метод отправки формы get).
-                        Этот метод позволит пользователю передать ссылку на результаты своего поиска другому человеку -->
-                        <form class="filter" method="GET" action="">
+                    <!-- Форма фильтрации содержит две группы фильтров: по цветам и по группе товаров -->
+                    <form class="filter filters" id="filterFormSMMD" method="GET">
+                    
+                        <!-- Перечень цветов -->
+                        <!-- Пользователь может выбрать сколько угодно цветов -->
 
-                            <!-- Форма фильтрации содержит две группы фильтров: по цветам и по группе товаров -->
-                                <!-- 1 -->
-                                <fieldset>
-                                    <!-- Заголовок фильтров по цветам -->
-                                    <legend>Colors:</legend>
-                                    <!-- Перечень цветов -->
-                                    <ul>
-                                        <!-- Пользователь может выбрать сколько угодно цветов -->
-                                        <li class="filter-option">
-                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-white" checked>
-                                            <label for="filter-white">White</label>
-                                        </li>
-                                        <li class="filter-option">
-                                            <input class="visually-hidden filter-input filter-input-checkbox disabled" type="checkbox" name="red" id="filter-red" disabled>
-                                            <label for="filter-red">Red</label>
-                                        </li>
-                                        <li class="filter-option">
-                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
-                                            <label for="filter-blue">Blue</label>
-                                        </li>
-                                        <li class="filter-option">
-                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
-                                            <label for="filter-black">Black</label>
-                                        </li>
-                                        <li class="filter-option">
-                                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="multi" id="filter-multi" checked>
-                                            <label for="filter-multi">Multicolor</label>
-                                        </li>
-                                    </ul>
-                                </fieldset>
-
-                                <!-- 2 -->
-                                <fieldset>
-                                    <!-- Заголовок фильтров по группе товаров -->
-                                    <legend>Type:</legend>
-                                    <!-- Перечень групп товаров -->
-                                    <ul>
-                                        <!-- В этой группе фильтров пользователь может выбрать только один тип товара -->
-                                        <li class="filter-option">
-                                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories" checked>
-                                            <label for="filter-accessories">Accessories</label>
-                                        </li>
-                                        <li class="filter-option">
-                                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="clothes" id="filter-clothes">
-                                            <label for="filter-clothes">Clothes</label>
-                                        </li>
-                                    </ul>
-                                </fieldset>
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-white-sm-md" value="white" checked>
+                        <label for="filter-white-sm-md" class="filter-option">White</label>
+                    
+                    
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox disabled" type="checkbox" name="red" id="filter-red-sm-md" value="red" disabled>
+                        <label for="filter-red-sm-md" class="filter-option">Red</label>
+                        
+                    
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue-sm-md" value="blue" checked>
+                        <label for="filter-blue-sm-md" class="filter-option">Blue</label>
+                    
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black-sm-md" value="black" checked>
+                        <label for="filter-black-sm-md" class="filter-option">Black</label>
 
 
-                            <!-- Кнопка для отправки формы -->
-                            <button type="submit" class="filter-button button">Show results</button>
-                        </form>
-                    </section>
+                        
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="multi" id="filter-multi-sm-md" value="multi" checked>
+                        <label for="filter-multi-sm-md" class="filter-option">Multicolor</label>
+
+                        <br>
+                        
+                        
+                        <!-- Перечень групп товаров -->
+                        
+                        <!-- В этой группе фильтров пользователь может выбрать только один тип товара -->
+                            
+                        
+                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories-sm-md" checked>
+                        <label for="filter-accessories-sm-md" class="filter-option">Accessories</label>
+                          
+                           
+                        
+                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="clothes" id="filter-clothes-sm-md">
+                        <label for="filter-clothes-sm-md" class="filter-option">Clothes</label>
+                            
+                     
+                    
+                        <!-- Кнопка для отправки формы -->
+                        <button type="submit" class="filter-button button" id="showFilterButtonSMMD">Show results</button>
+                    </form>
+
                 </div> 
+
+
+                
 
                 <!-- Merch --> 
                 <div class="merch col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 d-flex">
@@ -249,10 +236,10 @@
                         2) Shopper bag 
                         3) Bandana
                         4) Beanie -->
-                        <div class="catalog-list d-flex justify-content-space">
+                        <div class="catalog-list d-flex justify-content-start" id="catalogList">
                             
                                 <!-- Pin set -->
-                                <div class="catalog-item accessories-item multi-color-item blue-color-item col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                <div class="catalogItem catalog-item item-accessories item-multi item-blue col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                     <!-- Обернем все содержимое в одну ссылку: название и категорию товара, его изображение.
                                     Раньше было нельзя — это было запрещено прямо в спецификации HTML4. 
                                     В современной спецификации HTML5 блочные элементы можно оборачивать в ссылки. 
@@ -260,7 +247,7 @@
                                     Материалы: 
                                     1) HTML Standart https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element
                                     2) HTML Шорты: Ссылки вокруг блоков (автор: Вадим Макеев) https://htmlacademy.ru/blog/useful/html/short-1 -->
-                                    <a href="catalog-item.html">
+                                    <a href="catalog-item-pinset.html">
                                         <h3>
                                             <span class="catalog-category">Pin set</span>
                                             <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
@@ -275,8 +262,8 @@
                                     </div>
                                 </div>
                                 <!-- Shopper bag -->
-                                <div class="catalog-item accessories-item blue-color-item white-color-item col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                    <a href="catalog-item.html">
+                                <div class="catalogItem catalog-item item-accessories item-blue item-white col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <a href="catalog-item-shopper.html">
                                         <h3>
                                             <span class="catalog-category">Shopper bag</span>
                                             <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
@@ -291,8 +278,8 @@
                                     </div>
                                 </div>
                                 <!-- Bandana -->
-                                <div class="catalog-item clothes-item black-color-item col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                    <a href="catalog-item.html">
+                                <div class="catalogItem catalog-item item-clothes item-black col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <a href="catalog-item-bandana.html">
                                         <h3>
                                             <span class="catalog-category">Bandana</span>
                                             <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
@@ -307,8 +294,8 @@
                                     </div>
                                 </div>
                                 <!-- Beanie -->
-                                <div class="catalog-item clothes-item white-color-item col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                    <a href="catalog-item.html">
+                                <div class="catalogItem catalog-item item-clothes item-white col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <a href="catalog-item-beanie.html">
                                         <h3>
                                             <span class="catalog-category">Beanie</span>
                                             <span class="catalog-item-title">&laquo;Mia Arber&raquo;</span>
@@ -325,21 +312,6 @@
                             
                         </div>
 
-                        <!-- Pagination -->
-                        <ul class="pagination-list">
-                            <li class="pagination-item">
-                                <a href="#">1</a>
-                            </li>
-                            <li class="pagination-item pagination-item-current">
-                                <a>2</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a href="#">3</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a href="#">4</a>
-                            </li>
-                        </ul>
                     </section>
                 </div>
             </div>
@@ -405,6 +377,7 @@
     
     </div>
 
+    <script src="script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
