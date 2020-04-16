@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700&display=swap');
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+.navbar-brand,
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    
+}
+
+h1,
+h2,
+h3,
+p {
+    cursor: default;
+}
+
+h2 > a,
+h2 > a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+p > a,
+p > a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* .social-link-bar {
+    background-color: black;
+} */
+.social-link {
+    margin: 5px;
+}
+
+
+
